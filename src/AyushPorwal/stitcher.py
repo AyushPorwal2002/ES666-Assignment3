@@ -8,7 +8,10 @@ class PanaromaStitcher:
 
     def make_panaroma_for_images_in(self, path):
         # Step 1: Load images from the path using glob to find all .jpg images
-        image_paths = sorted(glob.glob(f'{path}{os.sep}*.jpg'))
+        # image_paths = sorted(glob.glob(f'{path}{os.sep}*.jpg'))/
+        imf = path
+        image_path = sorted(glob.glob(imf+os.sep+'*'))
+        print('Found {} Images for stitching'.format(len(image_path)))
 
         images = []
         for image_path in image_paths:
