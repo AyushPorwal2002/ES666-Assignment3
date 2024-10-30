@@ -10,6 +10,7 @@ class PanaromaStitcher:
         # Step 1: Load images from the path using glob to find all .jpg images
         image_paths = sorted(glob.glob(f'{path}{os.sep}*.jpg'))
         image_paths = [path.replace(os.sep, '\\\\') for path in image_paths]
+        print(image_path.len)
 
         images = []
         for image_path in image_paths:
